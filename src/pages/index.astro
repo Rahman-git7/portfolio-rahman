@@ -79,27 +79,38 @@ const projects = (await getCollection('work'))
 				</div>
 			</section>
 
-			<section class="section with-background bg-variant">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
-					<p>
-						I have been fortunate enough to receive praise for my work in several publications. Take
-						a look below to learn more.
-					</p>
-				</header>
+<section class="section with-background bg-variant">
+	<header class="section-header stack gap-2 lg:gap-4">
+		<h3>Stack Technique</h3>
+		<p>
+			Technologies et outils que je maîtrise dans l'écosystème DevOps pour automatiser, monitorer et déployer des infrastructures scalables.
+		</p>
+	</header>
 
-				<div class="gallery">
-					<Grid variant="small">
-						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
-								<li class="mention-card">
-									<p>{brand}</p>
-								</li>
-							))
-						}
-					</Grid>
-				</div>
-			</section>
+	<div class="gallery">
+		<Grid variant="small">
+			{
+				[
+					{ name: 'Kubernetes', emoji: '☸️' },
+					{ name: 'Terraform', emoji: '🏗️' },
+					{ name: 'Docker', emoji: '🐳' },
+					{ name: 'GitLab CI/CD', emoji: '🚀' },
+					{ name: 'AWS/Azure', emoji: '☁️' },
+					{ name: 'Ansible', emoji: '⚙️' },
+					{ name: 'Grafana', emoji: '📊' },
+					{ name: 'Prometheus', emoji: '📈' }
+				].map((tech) => (
+					<li class="mention-card">
+						<p>
+							<span style="font-size: 1.8rem; margin-right: 0.5rem; display: inline-block;">{tech.emoji}</span>
+							{tech.name}
+						</p>
+					</li>
+				))
+			}
+		</Grid>
+	</div>
+</section>
 		</main>
 
 		<ContactCTA />
